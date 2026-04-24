@@ -2,10 +2,10 @@
   "name": "kolhapure_agency",
   "buildCommand": "npm run vercel-build",
   "outputDirectory": "dist",
-  "routes": [
+  "rewrites": [
     {
-      "src": "^/(.*)$",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
