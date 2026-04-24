@@ -1,5 +1,11 @@
 {
   "name": "kolhapure_agency",
   "buildCommand": "npm run vercel-build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "routes": [
+    {
+      "src": "^/(.*)$",
+      "dest": "/index.html"
+    }
+  ]
 }
