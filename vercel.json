@@ -1,6 +1,5 @@
 {
   "name": "kolhapure_agency",
-  "buildCommand": "npm run vercel-build",
   "outputDirectory": "dist",
   "rewrites": [
     {
