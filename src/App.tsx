@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle2, Code2, Globe2, Layers, MessageSquare, PenTool, Sparkles, Terminal, TrendingUp } from 'lucide-react';
 
 function Navbar() {
