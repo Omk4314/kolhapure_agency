@@ -1,11 +1,6 @@
 {
-  "framework": "vite",
-  "name": "kolhapure_agency",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "installCommand": "npm install",
+  "framework": null
 }
