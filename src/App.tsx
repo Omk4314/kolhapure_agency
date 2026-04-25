@@ -16,8 +16,8 @@ function Navbar() {
           <a href="#services" className="hover:text-white transition-colors">Services</a>
           <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
         </div>
-        <a 
-          href="https://wa.me/917276889611" 
+        <a
+          href="https://wa.me/917276889611?text=Hi%20Kolhapure%20Agency,%20I%20would%20like%20to%20work%20with%20you"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors"
