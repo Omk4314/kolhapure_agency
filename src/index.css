@@ -6,6 +6,10 @@
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-neutral-950 text-neutral-50 antialiased selection:bg-neutral-800 selection:text-neutral-100;
   overflow-x: hidden;
