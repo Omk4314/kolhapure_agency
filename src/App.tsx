@@ -17,7 +17,7 @@ function Navbar() {
           <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
         </div>
         <a 
-          href="#contact" 
+          href="tel:+917276889611" 
           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors"
         >
           Work with us
@@ -268,9 +268,9 @@ function CTA() {
           <p className="text-xl text-neutral-400 mb-10 max-w-2xl mx-auto">
             Let's discuss how we can elevate your technical documentation and social media presence to match the quality of your product.
           </p>
-          <button className="px-8 py-4 rounded-full bg-white text-black font-semibold text-lg hover:bg-neutral-200 transition-colors inline-block">
+          <a href="mailto:kolhapureom4314@gmail.com" className="px-8 py-4 rounded-full bg-white text-black font-semibold text-lg hover:bg-neutral-200 transition-colors inline-block">
             Start the conversation
-          </button>
+          </a>
         </div>
       </motion.div>
     </section>
