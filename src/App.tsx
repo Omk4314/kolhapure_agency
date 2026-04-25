@@ -17,7 +17,9 @@ function Navbar() {
           <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
         </div>
         <a 
-          href="tel:+917276889611" 
+          href="https://wa.me/917276889611" 
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors"
         >
           Work with us
