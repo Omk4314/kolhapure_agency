@@ -70,9 +70,12 @@ function Hero() {
             Book a content strategy call
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-          <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors">
+          <a 
+            href="mailto:kolhapureom4314@gmail.com"
+            className="w-full sm:w-auto px-8 py-4 rounded-full bg-transparent border border-white/20 text-white font-semibold hover:bg-white/5 transition-colors"
+          >
             Get a free content audit
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
