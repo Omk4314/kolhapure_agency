@@ -314,7 +314,6 @@ function Footer() {
             <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
             <li><a href="#" className="hover:text-white transition-colors">X (Twitter)</a></li>
             <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-            <li><a href="#" className="hover:text-white transition-colors">Dribbble</a></li>
           </ul>
         </div>
       </div>
