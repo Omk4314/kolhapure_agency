@@ -1,31 +1,104 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, Code2, Globe2, Layers, MessageSquare, PenTool, Sparkles, Terminal, TrendingUp } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Code2, Globe2, Layers, Menu, MessageSquare, PenTool, Sparkles, Terminal, TrendingUp, X } from 'lucide-react';
+import { useState } from 'react';
 
 function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="font-display font-bold text-xl tracking-tight flex items-center gap-2">
-          <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-black">
-            <span className="font-bold -mt-0.5">K</span>
+    <>
+      <nav className="fixed top-0 inset-x-0 z-50 border-b border-white/5 bg-neutral-950/80 backdrop-blur-md">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <div className="font-display font-bold text-xl tracking-tight flex items-center gap-2">
+            <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-black">
+              <span className="font-bold -mt-0.5">K</span>
+            </div>
+            Kolhapure.
           </div>
-          Kolhapure.
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href="#services" className="hover:text-white transition-colors">Services</a>
+            <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
+          </div>
+
+          {/* Desktop CTA */}
+          <a
+            href="https://wa.me/917276889611?text=Hi%20Kolhapure%20Agency,%20I%20would%20like%20to%20work%20with%20you"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors"
+          >
+            Work with us
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-white/5 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
-        <div className="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
-          <a href="#about" className="hover:text-white transition-colors">About</a>
-          <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#why-us" className="hover:text-white transition-colors">Why Us</a>
-        </div>
-        <a
-          href="https://wa.me/917276889611?text=Hi%20Kolhapure%20Agency,%20I%20would%20like%20to%20work%20with%20you"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black text-sm font-medium hover:bg-neutral-200 transition-colors"
+      </nav>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="fixed inset-0 z-40 bg-neutral-950/95 backdrop-blur-md md:hidden"
+          onClick={() => setIsMenuOpen(false)}
         >
-          Work with us
-        </a>
-      </div>
-    </nav>
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="fixed right-0 top-20 h-full w-80 bg-neutral-900 border-l border-white/10 p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex flex-col gap-8 mt-8">
+              <div className="flex flex-col gap-6 text-lg font-medium">
+                <a
+                  href="#about"
+                  className="text-neutral-400 hover:text-white transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  About
+                </a>
+                <a
+                  href="#services"
+                  className="text-neutral-400 hover:text-white transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Services
+                </a>
+                <a
+                  href="#why-us"
+                  className="text-neutral-400 hover:text-white transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Why Us
+                </a>
+              </div>
+
+              <a
+                href="https://wa.me/917276889611?text=Hi%20Kolhapure%20Agency,%20I%20would%20like%20to%20work%20with%20you"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full px-6 py-3 rounded-full bg-white text-black font-semibold text-center hover:bg-neutral-200 transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Work with us
+              </a>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </>
   );
 }
 
